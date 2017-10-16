@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+    table {
+        width: 100%;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    th {
+        background-color: #5574ff;
+    }
+</style>
+</head>
+<body>
+<h1>Our super table</h1>
+<table>
+    <tr>
+        <th>Item1</th>
+        <th>Item2</th>
+        <th>Item1 + item2</th>
+        <th>Paire/impaire</th>
+    </tr>
+    {% for data in result %}
+        <tr>
+            <td>{{ data[0] }}</td>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
